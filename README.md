@@ -19,3 +19,18 @@ Example for unitapi.yaml
         diagram: ""
         db-connection:
           DataGrip: latest
+
+
+https://github.com/BiteBit/koa-oai-router
+
+        ErrorModel:
+          type: "object"
+          required:
+            - "code"
+            - "message"
+          properties:
+            code:
+              type: "integer"
+              format: "int32"
+            message:
+              type: "string"
