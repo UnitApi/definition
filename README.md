@@ -34,3 +34,26 @@ https://github.com/BiteBit/koa-oai-router
               format: "int32"
             message:
               type: "string"
+
+# ./api/definitions/pets.yaml
+
+    Pet:
+      type: "object"
+      allOf:
+        - $ref: "#/definitions/NewPet"
+        - required:
+            - "id"
+          properties:
+            id:
+              type: "integer"
+              format: "int64"
+
+    NewPet:
+      type: "object"
+      required:
+        - "name"
+      properties:
+        name:
+          type: "string"
+        tag:
+          type: "string"
